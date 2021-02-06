@@ -1,0 +1,65 @@
+{
+  "name": "learnpack-html",
+  "description": "HTML/CSS compiler for learnpack tutorials",
+  "version": "0.0.14",
+  "author": "Alejandro Sanchez @alesanchezr",
+  "bugs": "https://github.com/learnpack/learnpack/issues",
+  "dependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@oclif/command": "^1.6.1",
+    "@oclif/config": "^1.15.1",
+    "babel-jest": "^26.6.3",
+    "chalk": "^4.1.0",
+    "compile-run": "^2.3.2",
+    "jest": "^24.8.0",
+    "prettier": "^2.2.1",
+    "rewire": "^5.0.0",
+    "shelljs": "^0.8.4",
+    "source-map-support": "^0.5.19"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "@oclif/plugin-help": "^3.1.0",
+    "@oclif/test": "^1.2.6",
+    "chai": "^4.2.0",
+    "cli-ux": "^5.5.1",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "globby": "^10.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/learnpack/html-compiler",
+  "keywords": [
+    "oclif-plugin"
+  ],
+  "license": "https://learnpack.co/terms",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "oclif-example",
+    "devPlugins": [
+      "@oclif/plugin-help"
+    ],
+    "hooks": {
+      "action": "./src/plugin.js"
+    }
+  },
+  "repository": "learnpack/html-compiler",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
