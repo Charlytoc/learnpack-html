@@ -35,7 +35,7 @@ module.exports = {
     const foundErrors = [].concat(errors.filter(e => e !== null))
     if(foundErrors.length > 0) throw CompilationError(foundErrors.map(e => e.message).join(""))
     
-    cli.open(`${configuration.address}:${configuration.port}/preview`)
+    //cli.open(`${configuration.address}:${configuration.port}/preview`)
     return Utils.cleanStdout("Successfully built your HTML")
   },
 }
