@@ -35,7 +35,8 @@ module.exports = {
     const foundErrors = [].concat(errors.filter(e => e !== null))
     if(foundErrors.length > 0) throw CompilationError(foundErrors.map(e => e.message).join(""))
     
-    //cli.open(`${configuration.address}:${configuration.port}/preview`)
+    // do not open a new window with the code from here
+    // do it from the front-end learnpack-editor
     return Utils.cleanStdout("Successfully built your HTML")
   },
 }
