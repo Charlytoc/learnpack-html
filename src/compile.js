@@ -35,7 +35,10 @@ module.exports = {
     const foundErrors = [].concat(errors.filter(e => e !== null))
     if(foundErrors.length > 0) throw CompilationError(foundErrors.map(e => e.message).join(""))
     
-    const url = `${configuration.address}:${configuration.port}/preview`;
+    let url = `${configuration.address}:${configuration.port}/preview`;
+    if(configuration.editor.mode === 'gitpod'){
+      url = `https://${configuration.port}-${configuration.address.substring(8)}/preview`
+    }
     socket.emit('openWindow', status='ready', logs=[`Opening ${url}`], inputs=[], report=[], data=url)
     return Utils.cleanStdout("Successfully built your HTML")
   },
