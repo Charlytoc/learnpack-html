@@ -35,7 +35,7 @@ module.exports = {
     const foundErrors = [].concat(errors.filter(e => e !== null))
     if(foundErrors.length > 0) throw CompilationError(foundErrors.map(e => e.message).join(""))
     
-    socket.openWindow(configuration.publicUrl)
+    socket.openWindow(`${configuration.publicUrl}/preview`)
 
     return Utils.cleanStdout("Successfully built your HTML")
   },

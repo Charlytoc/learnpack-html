@@ -19,7 +19,7 @@ $ npm install -g learnpack-html
 $ oclif-example COMMAND
 running command...
 $ oclif-example (-v|--version|version)
-learnpack-html/0.0.18 darwin-x64 node-v10.17.0
+learnpack-html/0.0.19 darwin-x64 node-v10.17.0
 $ oclif-example --help [COMMAND]
 USAGE
   $ oclif-example COMMAND
