@@ -1,13 +1,13 @@
 const fs = require('fs')
 const prettier = require("prettier")
 const cli = require("cli-ux").default
-const { Utils, CompilationError } = require('./utils/index.js')
+const { Utils, CompilationError } = require('learnpack/plugin')
 
 module.exports = {
   validate: () => true,
   run: async function ({ exercise, socket, configuration }) {
 
-    let entryPath = exercise.entry || exercise.files.map(f => './'+f.path).find(f => f.indexOf('index.html') > -1)
+    let entryPath = exercise.files.map(f => './'+f.path).find(f => f.includes(exercise.entry || 'index.html'))
     if(!entryPath) throw CompilationError("Missing index.html entry file");
 
     let errors = exercise.files.filter(f => f.path.includes(".html") || f.path.includes(".css")).map((file)=>{
