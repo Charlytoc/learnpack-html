@@ -22,7 +22,7 @@ $ npm install -g @learnpack/html
 $ oclif-example COMMAND
 running command...
 $ oclif-example (-v|--version|version)
-@learnpack/html/1.0.0 win32-x64 node-v16.14.0
+@learnpack/html/1.1.0 win32-x64 node-v16.14.0
 $ oclif-example --help [COMMAND]
 USAGE
   $ oclif-example COMMAND
