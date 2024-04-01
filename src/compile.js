@@ -37,7 +37,14 @@ module.exports = {
     
     socket.openWindow(`${configuration.publicUrl}/preview`)
 
-    return Utils.cleanStdout("Successfully built your HTML")
+    const result = {
+      starting_at: Date.now(),
+      source_code: "",
+      stdout: Utils.cleanStdout("Successfully built your HTML"),
+      exitCode: 0,
+      ended_at: new Date(),
+    }
+    return result
   },
 }
   
