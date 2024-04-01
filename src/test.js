@@ -37,11 +37,9 @@ module.exports =  {
     }
 
     const getCommands = async function(){
-
       let answers = []
-      
       jestConfig.reporters = [[ path.resolve(__dirname+'/utils/reporter.js'), { reportPath: path.resolve(`${configuration.dirPath}/reports/${exercise.slug}.json`) }]];
-      return `jest --config='${JSON.stringify({ ...jestConfig, globals: { __stdin: answers }, testRegex: getEntry() }).replace(/"/g, '\\"')}' --colors`
+      return `jest --config='${JSON.stringify({ ...jestConfig, globals: { __stdin: answers }, testRegex: getEntry() })}' --colors`
     }
 
     const getStdout = (rawStdout) => {
