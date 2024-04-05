@@ -12,8 +12,23 @@ HTML Compiler for learnpack tutorials
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
+* [Usage](#usage)
+* [Commands](#commands)
+<!-- tocstop -->
 # Usage
 <!-- usage -->
+```sh-session
+$ npm install -g @learnpack/html
+$ oclif-example COMMAND
+running command...
+$ oclif-example (-v|--version|version)
+@learnpack/html/1.1.4 win32-x64 node-v20.10.0
+$ oclif-example --help [COMMAND]
+USAGE
+  $ oclif-example COMMAND
+...
+```
+<!-- usagestop -->
 ```sh-session
 $ npm install -g @learnpack/html
 $ oclif-example COMMAND
@@ -28,5 +43,7 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+
+<!-- commandsstop -->
 
 <!-- commandsstop -->
