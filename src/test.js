@@ -73,7 +73,6 @@ module.exports =  {
       else {
         jestCommand = `jest --config='${JSON.stringify(jestConfig)}' --colors`;
       }
-      console.log(jestCommand);
       return jestCommand
     }
 
@@ -109,7 +108,7 @@ module.exports =  {
     }
 
     const result = resultBuilder.finish(code, stdout, stderr)
-    console.log(result.stdout, "receiving code: ", code);
+
     if(code != 0) {
       result.stderr = getStdout(stdout || stderr).join()
     }
